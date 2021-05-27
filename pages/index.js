@@ -1,4 +1,3 @@
-import Head from "next/head";
 import "tailwindcss/tailwind.css";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
