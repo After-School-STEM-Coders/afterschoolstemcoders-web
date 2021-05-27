@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useRouter } from "next/router";
 
 // This is an example of a component. Components must be capitalized.
