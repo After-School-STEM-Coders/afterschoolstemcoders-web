@@ -1,3 +1,3 @@
-export const example1 = () => {
-  return <div>example 1</div>;
+export const Example1 = () => {
+  return <div className="text-center">example 1</div>;
 };
