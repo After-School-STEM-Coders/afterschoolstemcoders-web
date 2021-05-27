@@ -1,19 +1,11 @@
-import Head from "next/head";
 import "tailwindcss/tailwind.css";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
-const Home = () => {
-  return (
-    <>
-      <Head>
-        <title>After-School STEM Coders</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="h-screen bg-gray-500 flex justify-center items-center">
-        <div className="text-3xl text-center">Coming Soon!</div>
-      </div>
-
-      <footer></footer>
-    </>
-  );
-};
-export default Home;
+export default function foo() {
+  const router = useRouter();
+  useEffect(() => {
+    return router.push("/home");
+  });
+  return <div>you shouldn't see this</div>;
+}
