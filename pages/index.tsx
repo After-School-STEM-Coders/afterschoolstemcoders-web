@@ -1,14 +1,15 @@
-import "tailwindcss/tailwind.css";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-export default () => {
+export default function IndexPage() {
   const router = useRouter();
+
   useEffect(() => {
-    // 'page' index is looked at first, but here we choose which page we want to send a user to.
-    return router.push("/home"); // redirect to pages/home.js
+    const run = async () => {
+      await router.push("/home");
+    };
+    run();
   });
-  return (
-    <div className="h-screen bg-gray-500 flex justify-center items-center"></div>
-  );
-};
+
+  return <div className="h-screen"></div>;
+}
