@@ -16,7 +16,7 @@ export const Header = () => {
 
   menu.push({
     href: "/",
-    text: "Account",
+    text: "Homework tool",
   });
 
   menu.push({
@@ -30,30 +30,28 @@ export const Header = () => {
   });
 
   return (
-    <div>
-      <div className="p-5 flex flex-row justify-center fixed text-gray-200 bg-gray-700 bg-opacity-80 w-full">
-        <div className=" space-x-8 flex flex-row flex-wrap items-center w-full max-w-screen-xl justify-center">
-          <Link href="/">
-            <a className="flex-none text-5xl">Logo</a>
-          </Link>
+    <div className="p-5 flex flex-row justify-center fixed text-gray-200 bg-gray-700 bg-opacity-80 w-full">
+      <div className=" space-x-8 flex flex-row flex-wrap items-center w-full max-w-screen-xl justify-center">
+        <Link href="/">
+          <a className="flex-none text-5xl">CSC</a>
+        </Link>
 
-          <div className="flex flex-1 items-center justify-end">
-            <div className="space-x-16 flex flex-1 mr-8 font-semibold justify-center">
-              <ul className="flex flex-none justify-center space-x-8">
-                {menu.map(({ href, text }) => (
-                  <li key={text} className="relative">
-                    <ActiveLink
-                      href={href}
-                      activeClassName="border-b-2 border-denim-500 hover:border-peach-500"
-                    >
-                      <a className="py-1 font-normal hover:text-gray-400 transition-all duration-300">
-                        {text}
-                      </a>
-                    </ActiveLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="flex flex-1 items-center justify-end">
+          <div className="space-x-16 flex flex-1 mr-8 font-semibold justify-center">
+            <ul className="flex flex-none justify-center space-x-8">
+              {menu.map(({ href, text }) => (
+                <li key={text} className="relative">
+                  <ActiveLink
+                    href={href}
+                    activeClassName="border-b-2 border-denim-500 hover:border-peach-500"
+                  >
+                    <a className="py-1 font-normal hover:text-gray-400 transition-all duration-300">
+                      {text}
+                    </a>
+                  </ActiveLink>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
