@@ -8,5 +8,7 @@ export default () => {
     // 'page' index is looked at first, but here we choose which page we want to send a user to.
     return router.push("/home"); // redirect to pages/home.js
   });
-  return <div>you shouldn't see this</div>;
+  return (
+    <div className="h-screen bg-gray-500 flex justify-center items-center"></div>
+  );
 };
