@@ -1,24 +1,58 @@
-import { useRouter } from "next/router";
+import Link from "next/link";
+import React from "react";
+import { ActiveLink } from "../atoms/ActiveLink";
 
 export const Header = () => {
-  const router = useRouter();
+  const menu: { href: string; text: string }[] = [];
+  menu.push({
+    href: "/",
+    text: "Workshop",
+  });
 
-  const handleClick = async () => {
-    await router.push("/example2");
-  };
+  menu.push({
+    href: "/",
+    text: "Flow chart",
+  });
+
+  menu.push({
+    href: "/",
+    text: "Account",
+  });
+
+  menu.push({
+    href: "/",
+    text: "Advice",
+  });
+
+  menu.push({
+    href: "/",
+    text: "Portfolios",
+  });
+
   return (
     <div>
-      <div className="p-4 flex flex-row justify-betweend fixed text-white bg-gray-700 bg-opacity-80 w-full">
+      <div className="p-5 flex flex-row justify-center fixed text-gray-200 bg-gray-700 bg-opacity-80 w-full">
         <div className=" space-x-8 flex flex-row flex-wrap items-center w-full max-w-screen-xl justify-center">
-          <div className="text-7xl">CSC</div>
+          <Link href="/">
+            <a className="flex-none text-5xl">Logo</a>
+          </Link>
 
           <div className="flex flex-1 items-center justify-end">
             <div className="space-x-16 flex flex-1 mr-8 font-semibold justify-center">
-              <div className="cursor-pointer">Page</div>
-              <div className="cursor-pointer">Page</div>
-              <div className="cursor-pointer">Page</div>
-              <div className="cursor-pointer">Page</div>
-              <div className="cursor-pointer">Page</div>
+              <ul className="flex flex-none justify-center space-x-8">
+                {menu.map(({ href, text }) => (
+                  <li key={text} className="relative">
+                    <ActiveLink
+                      href={href}
+                      activeClassName="border-b-2 border-denim-500 hover:border-peach-500"
+                    >
+                      <a className="py-1 font-normal hover:text-gray-400 transition-all duration-300">
+                        {text}
+                      </a>
+                    </ActiveLink>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
