@@ -1,14 +1,17 @@
 import { Header } from "../components/organisms/Header";
+import { Advice } from "../components/organisms/Advice";
 
-const Advice = () => {
+const advice = () => {
 
     return (
-        <div className="h-screen bg-blue-900" >
+        <div >
             <Header />
-            
+            <div className="h-screen bg-gray-900 flex justify-center items-center">
+                <Advice />
+            </div>
         </div>
     );
     
 }
 
-export default Advice;
+export default advice;
