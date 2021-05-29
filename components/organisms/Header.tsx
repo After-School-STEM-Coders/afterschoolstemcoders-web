@@ -20,7 +20,7 @@ export const Header = () => {
   });
 
   menu.push({
-    href: "/",
+    href: "/advice",
     text: "Advice",
   });
 
