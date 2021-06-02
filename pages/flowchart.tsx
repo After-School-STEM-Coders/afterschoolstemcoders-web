@@ -1,15 +1,13 @@
 import { Header } from "../components/organisms/Header";
 import { Advice } from "../components/organisms/Advice";
 
-const advice = () => {
+const flowchart = () => {
   return (
     <div>
       <Header />
-      <div className="h-screen bg-blue-900 flex justify-center items-center">
-        <Advice />
-      </div>
+      <div className="h-screen bg-gray-900 flex justify-center items-center"></div>
     </div>
   );
 };
 
-export default advice;
+export default flowchart;
